@@ -1,0 +1,148 @@
+html {
+  font-size: 10px;
+}
+
+.connectFour {
+  background: url('http://luxuryroom.co/wp-content/uploads/2015/11/black-wood-table-top-with-wood-table-top-home-design-ideas.jpg') center center;
+  min-height: 100%;
+  min-width: 100%;
+  position:absolute;
+}
+.titleRow, .textRow {
+  text-align: center;
+}
+
+.titleRow h1, .textRow p {
+  color: #212121;
+}
+.connectFourBoard {
+  border: 1px solid black;
+  box-sizing: border-box;
+  height: 40em;
+  width: 55em;
+  margin-top: 2em;
+  margin-left: 3em;
+  box-shadow: -.5em -.5em .5em #212121;
+  background-color: #0000cc;
+}
+
+.col {
+  border-radius: 50%;
+  height: 5em;
+  width: 5em;
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: .5em;
+  margin-left: 1.9em;
+}
+
+.top {
+  margin-top: 1.25em;
+}
+
+#again {
+  margin-top: 2em;
+}
+
+.wrapper {
+  height: 14em;
+  width: 14em;
+  overflow: hidden;
+  float: right;
+  text-align: center;
+}
+
+.sprite {
+  height: 10em;
+  width: 12em;
+  overflow: visible;
+  float: left;
+  margin-top: 30em;
+  margin-right: 2.5em;
+}
+
+.sprite img {
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes wiggle {
+	0% {transform:rotate(4deg);}
+	50% {transform:rotate(-4deg);}
+	100% {transform:rotate(4deg);}
+}
+
+.wiggler {
+	-webkit-animation: wiggle 0.5s infinite;
+	-moz-animation: wiggle 0.5s infinite;
+	animation: wiggle 0.5s infinite;
+  margin-left: 2em;
+  height: 90%;
+  width: 90%;
+  float: left;
+}
+
+@keyframes scrunchy {
+  0% {height: 100%;}
+  50% {height: 90%;}
+  100% {height: 100%;}
+}
+
+.scrunch {
+  -webkit-animation: scrunchy 3s infinite;
+  -moz-animation: scrunchy 3s infinite;
+  animation: scrunchy 3s infinite;
+}
+
+.pokeMap {
+  background: url('http://img06.deviantart.net/4cc4/i/2010/080/b/9/poxemon_texture_by_taniac.jpg')
+}
+
+.pokeMap .container-fluid {
+  background-color: rgba(0, 0, 0, .3);
+}
+.formInput {
+  height: 5em;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 2em;
+}
+
+.formInput input {
+  background-color: rgb(150, 155, 155);
+}
+
+.formInput label {
+  background-color: #212121;
+  color: #dfdfdf;
+  padding: .2em;
+}
+
+.mapBoard {
+  margin-left: 3em;
+  margin-top: 2em;
+}
+
+.map {
+  width: 48em;
+  height: 48em;
+}
+
+.pixel {
+  height: 3em;
+  width: 3em;
+  box-sizing: border-box;
+}
+
+#player {
+  background-color: rgb(255, 0, 0) !important;
+}
+
+.rival {
+  background: url("http://cdn.bulbagarden.net/upload/5/51/Spr_RG_Blue_3.png") center center no-repeat;
+}
+.buttonInput {
+  margin-right: .5em;
+  margin-top: .3em;
+}

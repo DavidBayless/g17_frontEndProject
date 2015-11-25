@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+
+<!-- JQuery -->
+<script type = 'text/javascript' src='https://code.jquery.com/jquery-1.11.3.js'></script>
+
+<!-- Styles -->
+<link rel='stylesheet' href='styles.css'>
+
+<!-- connectFour app JS file -->
+<script rel = 'text/javascript' src = 'connectFour.js'></script>
+</head>
+<body>
+<main class = 'connectFour' style = 'display: none'>
+  <!-- <audio class = 'battleMusic' src="107-battle-vs-wild-pokemon-.mp3" autoplay loop></audio> -->
+
+  <!-- Create a Wrapper Create a grid Create circular Divs inside the grid -->
+
+  <div class = 'container-fluid'>
+    <div class = 'row titleRow'>
+      <div class = 'col-xs-6 col-md-offset-3'>
+        <h1></h1>
+      </div>
+    </div>
+    <div class = 'row boardRow'>
+      <div class ='col-xs-2 sprite'>
+        <img class = 'scrunch' src='http://vignette1.wikia.nocookie.net/pokemon/images/3/37/YellowRedBack.png/revision/latest?cb=20100502122800'/>
+      </div>
+      <div class = 'connectFourBoard col-xs-10'>
+        <div class = 'row top'>
+          <div class = 'col colOne rowOne' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colTwo rowOne' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colThree rowOne' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colFour rowOne' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colFive rowOne' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colSix rowOne' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colSeven rowOne' style = 'background-color: #fff'>
+
+          </div>
+        </div>
+        <div class = 'row'>
+          <div class = 'col colOne rowTwo' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colTwo rowTwo' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colThree rowTwo' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colFour rowTwo' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colFive rowTwo' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colSix rowTwo' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colSeven rowTwo' style = 'background-color: #fff'>
+
+          </div>
+        </div>
+        <div class = 'row'>
+          <div class = 'col colOne rowThree' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colTwo rowThree' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colThree rowThree' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colFour rowThree' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colFive rowThree' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colSix rowThree' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colSeven rowThree' style = 'background-color: #fff'>
+
+          </div>
+        </div>
+        <div class = 'row'>
+          <div class = 'col colOne rowFour' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colTwo rowFour' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colThree rowFour' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colFour rowFour' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colFive rowFour' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colSix rowFour' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colSeven rowFour' style = 'background-color: #fff'>
+
+          </div>
+        </div>
+        <div class = 'row'>
+          <div class = 'col colOne rowFive' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colTwo rowFive' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colThree rowFive' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colFour rowFive' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colFive rowFive' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colSix rowFive' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colSeven rowFive' style = 'background-color: #fff'>
+
+          </div>
+        </div>
+        <div class = 'row'>
+          <div class = 'col colOne rowSix' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colTwo rowSix' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colThree rowSix' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colFour rowSix' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colFive rowSix' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colSix rowSix' style = 'background-color: #fff'>
+
+          </div>
+          <div class = 'col colSeven rowSix' style = 'background-color: #fff'>
+
+          </div>
+        </div>
+      </div>
+      <div class = 'wrapper'>
+
+      </div>
+    </div>
+    <div class = 'row textRow'>
+      <div class = 'col-xs-6 col-xs-offset-3'>
+        <p></p>
+      </div>
+    </div>
+  </div>
+</main>
+<section class ='pokeMap'>
+  <audio src='106-the-road-to-viridian-city-from-palette.mp3' autoplay loop></audio>
+  <div class = 'container-fluid'>
+    <div class = 'row formInput'>
+      <div class = 'col-xs-offset-4 col-xs-4'>
+        <form>
+          <div class = 'col-xs-6'>
+            <label for = 'playerName'>Player Name</label>
+            <input type = 'text' name = 'playerName' id = 'playerNameVal'/>
+          </div>
+          <div class = 'col-xs-6'>
+            <label for = 'rivalName'>Rival Name</label>
+            <input type = 'text' name = 'rivalName' id = 'rivalNameVal'/>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class = 'row buttonInput'>
+      <div class = 'col-xs-offset-4 col-xs-4'>
+        <form>
+          <div class = 'col-xs-6 col-xs-offset-4'>
+            <label for ='submit'></label>
+            <input type = 'button' class = 'btn btn-default submitButton' value = 'Submit'/>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class = 'row mapBoard'>
+      <div class = 'col-xs-8 col-xs-offset-3 map'>
+        <div class = 'row'>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+        </div>
+        <div class = 'row'>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+        </div>
+        <div class = 'row'>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel rival' style = 'background-color: rgb(255, 255, 255);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+        </div>
+        <div class = 'row'>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+        </div>
+        <div class = 'row'>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' id = 'player' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+        </div>
+        <div class = 'row'>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+        </div>
+        <div class = 'row'>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+        </div>
+        <div class = 'row'>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(255, 255, 255)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+        </div>
+        <div class = 'row'>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+        </div>
+        <div class = 'row'>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+        </div>
+        <div class = 'row'>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel grass' style = 'background-color: rgb(0, 255, 0)'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+        </div>
+        <div class = 'row'>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+          <div class = 'col-xs-1 pixel' style = 'background-color: rgb(0,0,0);'></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
