@@ -1,0 +1,9 @@
+{
+  "firebase": "pokeconnectfourapp",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

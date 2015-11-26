@@ -25,10 +25,8 @@ function pokeMap() {
     for (var i = 0; i < $map.length; i++) {
       if ($map[i].id === 'player') {
         playerIndex = i;
-        console.log(playerIndex);
       }
     }
-    console.log(event.which);
     if (event.which == 119 && $map[playerIndex - 12].style.backgroundColor !== 'rgb(0, 0, 0)') {
       $map[playerIndex].id = '';
       playerIndex -= 12;
@@ -104,6 +102,7 @@ function connectFourAPICall(isSinglePlayer) {
     request.onreadystatechange = function() {
       if (this.readyState == 4 && this.status < 400) {
         var sprite = JSON.parse(this.responseText).image;
+        console.log(sprite);
         var name = JSON.parse(this.responseText).pokemon.name.charAt(0).toUpperCase() + JSON.parse(this.responseText).pokemon.name.slice(1);
         var img = $('<img class = "wiggler" src="http://pokeapi.co' + sprite + '">');
         $('.wrapper').append(img);
@@ -527,6 +526,7 @@ function connectFourApp(name, isSinglePlayer) {
   }
 
   function placeValueAssessment(horizArray, vertArray, northEastArray, northWestArray) {
+    console.log('space');
     var horizValue = arrayAssess(horizArray);
     var vertValue = arrayAssess(vertArray);
     var northEastValue = arrayAssess(northEastArray);
@@ -537,6 +537,7 @@ function connectFourApp(name, isSinglePlayer) {
   }
 
   function arrayAssess(assessedArray) {
+    console.log(assessedArray);
     var inARow = 0;
     var opponentInARow = 0;
     var opponentStop = false;
@@ -554,7 +555,8 @@ function connectFourApp(name, isSinglePlayer) {
       } else if (assessedArray[i] === 2 && (assessedArray[i + 1] === 3 || assessedArray[i - 1] === 3 || assessedArray[i + 2] === 3 || assessedArray[i - 2] === 3 || assessedArray[i + 3] === 3 || assessedArray[i -  3] === 3)) {
         opponentInARow++;
         inARow = 0;
-        if (opponentInARow >= 2) {
+        connectionValue += 2;
+        if (opponentInARow === 3) {
           opponentStop = true;
         }
       } else if (assessedArray[i] === 3) {
