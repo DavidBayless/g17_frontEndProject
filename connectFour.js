@@ -96,24 +96,25 @@ function connectFourAPICall(isSinglePlayer) {
     return num.toString();
   }
 
+  var randomPokemon = randNum();
   if (isSinglePlayer) {
     request = new XMLHttpRequest();
 
     request.onreadystatechange = function() {
       if (this.readyState == 4 && this.status < 400) {
-        var sprite = JSON.parse(this.responseText).image;
-        console.log(sprite);
+        // var sprite = JSON.parse(this.responseText).image;
+        // console.log(sprite);
         var name = JSON.parse(this.responseText).pokemon.name.charAt(0).toUpperCase() + JSON.parse(this.responseText).pokemon.name.slice(1);
-        var img = $('<img class = "wiggler" src="http://pokeapi.co' + sprite + '">');
+        var img = $('<img class = "wiggler" src="./pokeImg/' +(randomPokemon - 1)+ '.png">');
         $('.wrapper').append(img);
         connectFourApp(name, isSinglePlayer);
       }
     };
 
-    request.open('GET', 'http://pokeapi.co/api/v1/sprite/'+randNum()+'/');
+    request.open('GET', 'https://jsonp.afeld.me/?url=http%3A%2F%2Fpokeapi.co%2Fapi%2Fv1%2Fsprite%2F'+randomPokemon+'%2F');
     request.send();
   } else {
-    var img = $('<img class = "wiggler" src="http://cdn.bulbagarden.net/upload/5/51/Spr_RG_Blue_3.png">');
+    var img = $('<img class = "wiggler" src="./pokeImg/Gary.png">');
     $('.wrapper').append(img);
     connectFourApp(rivalName, isSinglePlayer);
   }
@@ -186,9 +187,9 @@ function connectFourApp(name, isSinglePlayer) {
   document.querySelector('.textRow p').innerHTML = currPlayer + '\'s turn!';
   document.querySelector('.textRow p').style.backgroundColor = currColor;
 
+  var isBoardFull = 0;
   // Click function for placing pieces and determining if there is a winner.
   $space.click(spaceClick);
-
   function spaceClick() {
     var iterator = 5;
 
@@ -247,8 +248,13 @@ function connectFourApp(name, isSinglePlayer) {
         currPlayer = prevPlayer;
         prevPlayer = placePlayer;
 
-        document.querySelector('.textRow p').innerHTML = currPlayer + '\'s turn!';
-        document.querySelector('.textRow p').style.backgroundColor = currColor;
+        isBoardFull++;
+        if (isBoardFull !== 42) {
+          document.querySelector('.textRow p').innerHTML = currPlayer + '\'s turn!';
+          document.querySelector('.textRow p').style.backgroundColor = currColor;
+        } else {
+          winAlert(isBoardFull);
+        }
 
         if (currPlayer == name && isSinglePlayer === true) {
           var moves = computerChoiceOptions();
@@ -416,8 +422,12 @@ function connectFourApp(name, isSinglePlayer) {
     }
   }
 
-  function winAlert() {
-    document.querySelector('h1').innerHTML = currPlayer + ' Wins!!!';
+  function winAlert(isBoardFull) {
+    if (isBoardFull === 42) {
+      document.querySelector('h1').innerHTML = "It's a Draw!!!";
+    } else {
+      document.querySelector('h1').innerHTML = currPlayer + ' Wins!!!';
+    }
     $space.off('click', spaceClick);
     document.querySelector('.textRow').innerHTML = '<button class = "btn btn-default" id = "again">Keep Going!</button>';
     document.querySelector('audio').pause();

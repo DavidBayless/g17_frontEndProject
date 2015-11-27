@@ -2,7 +2,7 @@
 
 body {
   width: 100%;
-  background: url('http://wallpoper.com/images/00/31/09/01/pokemon-pikachu_00310901.jpg') center center no-repeat;
+  background: url('./pokeImg/pikaCover.jpg') center center no-repeat;
 }
 
 .col-md-12 h1 {
