@@ -3,11 +3,10 @@ html {
 }
 
 .connectFour {
-  background: url('http://luxuryroom.co/wp-content/uploads/2015/11/black-wood-table-top-with-wood-table-top-home-design-ideas.jpg') center center;
-  min-height: 100%;
-  min-width: 100%;
-  position:absolute;
+  background: url('https://s-media-cache-ak0.pinimg.com/736x/81/d8/26/81d82640afb2f47a6c93c3247b594825.jpg') center center no-repeat;
+  background-size: cover;
 }
+
 .titleRow, .textRow {
   text-align: center;
 }
